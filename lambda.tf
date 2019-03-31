@@ -18,6 +18,9 @@ resource "aws_iam_role" "iam_for_lambda" {
 EOF
 }
 
+# TODO this policy needs atted to IAM role. 
+# AWSLambdaSQSQueueExecutionRole
+
 resource "aws_lambda_function" "test_lambda" {
   filename         = "lambda-function.zip"
   function_name    = "lambda-function_name"
